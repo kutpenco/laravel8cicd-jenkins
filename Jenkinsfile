@@ -44,7 +44,7 @@ pipeline {
         }
         stage("Docker build") {
             steps {
-                sh "docker build -t cpdrenato/laravel8cicd-jenkins ."
+                sh "docker build -t kutpenco/laravel82cicd-jenkins ."
             }
         }
         stage("Docker push") {
@@ -54,12 +54,12 @@ pipeline {
             }
             steps {
                 sh "docker login --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}"
-                sh "docker push cpdrenato/laravel8cicd-jenkins"
+                sh "docker push kutpenco/laravel82cicd-jenkins"
             }
         }
         stage("Deploy to staging") {
             steps {
-                sh "docker run -d --rm -p 80:80 --name laravel8cicd-jenkins cpdrenato/laravel8cicd-jenkins"
+                sh "docker run -d --rm -p 80:80 --name laravel82cicd-jenkins kutpenco/laravel82cicd-jenkins"
             }
         }
         stage("Acceptance test curl") {
@@ -74,7 +74,7 @@ pipeline {
             }
             post {
                 always {
-                    sh "docker stop laravel8cicd-jenkins"
+                    sh "docker stop laravel82cicd-jenkins"
                 }
             }
         }

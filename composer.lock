@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
+                "php": "^8.2",
                 "symfony/http-foundation": "~2.7|~3.0|~4.0|~5.0",
                 "symfony/http-kernel": "~2.7|~3.0|~4.0|~5.0"
             },
@@ -46,8 +46,8 @@
             ],
             "authors": [
                 {
-                    "name": "Alexander",
-                    "email": "iam.asm89@gmail.com"
+                    "name": "Penco",
+                    "email": "madrugas.consultoria@hmail.com"
                 }
             ],
             "description": "Cross-origin resource sharing library and stack middleware",
